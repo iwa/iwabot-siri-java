@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '3.1.0'
+    id 'io.spring.dependency-management' version '1.1.0'
 }
 
 java {
@@ -22,6 +24,8 @@ dependencies {
     implementation("net.dv8tion:JDA:5.1.1") {
         exclude module: 'opus-java' // disable opus support
     }
+    implementation 'org.springframework.boot:spring-boot-starter-web' // Spring Boot web server
+    implementation 'io.github.cdimascio:dotenv-java:2.2.4' // dotenv for loading environment variables
 }
 
 test {
